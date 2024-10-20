@@ -5,22 +5,24 @@
       "type": "motoko"
     },
     "ai_health_frontend": {
+      "type": "assets",
+      "source": [
+        "src/ai_health_frontend/dist/"
+      ],
       "dependencies": [
         "ai_health_backend"
-      ],
-      "source": [
-        "src/ai_health_frontend/dist"
-      ],
-      "type": "assets",
-      "workspace": "ai_health_frontend"
+      ]
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:4943",
+      "type": "ephemeral"
     }
   },
   "defaults": {
     "build": {
-      "args": "",
       "packtool": ""
     }
-  },
-  "output_env_file": ".env",
-  "version": 1
+  }
 }
