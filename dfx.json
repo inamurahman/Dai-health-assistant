@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "ai_health_backend": {
+      "main": "src/ai_health_backend/main.mo",
+      "type": "motoko"
+    },
+    "ai_health_frontend": {
+      "dependencies": [
+        "ai_health_backend"
+      ],
+      "source": [
+        "src/ai_health_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "ai_health_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
